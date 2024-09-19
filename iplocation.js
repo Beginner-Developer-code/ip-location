@@ -6,23 +6,31 @@ function isPrivateIp(ip) {
 
   if (
     values[0] == 10 &&
-    (values[1] >= 0 || values[1] <= 255) &&
-    (values[2] >= 0 || values[2] <= 255) &&
-    (values[3] >= 0 || values[3] <= 255)
+    values[1] >= 0 &&
+    values[1] <= 255 &&
+    values[2] >= 0 &&
+    values[2] <= 255 &&
+    values[3] >= 0 &&
+    values[3] <= 255
   ) {
     flag = true;
   } else if (
     values[0] == 172 &&
-    (values[1] >= 16 || values[1] <= 31) &&
-    (values[2] >= 0 || values[2] <= 255) &&
-    (values[3] >= 0 || values[3] <= 255)
+    values[1] >= 16 &&
+    values[1] <= 31 &&
+    values[2] >= 0 &&
+    values[2] <= 255 &&
+    values[3] >= 0 &&
+    values[3] <= 255
   ) {
     flag = true;
   } else if (
     values[0] == 192 &&
     values[1] == 168 &&
-    (values[2] >= 0 || values[2] <= 255) &&
-    (values[3] >= 0 || values[3] <= 255)
+    values[2] >= 0 &&
+    values[2] <= 255 &&
+    values[3] >= 0 &&
+    values[3] <= 255
   ) {
     flag = true;
   }
